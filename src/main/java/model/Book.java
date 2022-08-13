@@ -16,7 +16,6 @@ public class Book {
     private int count;
     private double price;
     private String genre;
-
     private User registeredUser;
 
-  }
+}

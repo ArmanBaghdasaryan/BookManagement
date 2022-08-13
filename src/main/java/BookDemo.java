@@ -9,6 +9,7 @@ import storage.BookStorage;
 import storage.UserStorage;
 import model.Gender;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 class BookDemo implements Commands {
@@ -106,11 +107,24 @@ class BookDemo implements Commands {
                 case PRINT_BOOKS_BY_PRICE_RANGE:
                     printBooksByPriceRange();
                     break;
+                case DOWNLOAD_BOOK_EXCEL:
+                    downloadBooksExcel();
+                    break;
                 default:
                     System.out.println("Invalid command!");
 
 
             }
+        }
+    }
+
+    private static void downloadBooksExcel() {
+        System.out.println("Please input file location");
+        String fileDir = scanner.nextLine();
+        try {
+            bookStorage.writeStudentToExcel(fileDir);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -178,6 +192,9 @@ class BookDemo implements Commands {
                     break;
                 case PRINT_ALL_AUTHOR:
                     authorStorage.print();
+                    break;
+                case DOWNLOAD_BOOK_EXCEL:
+                    downloadBooksExcel();
                     break;
                 default:
                     System.out.println("Invalid command");

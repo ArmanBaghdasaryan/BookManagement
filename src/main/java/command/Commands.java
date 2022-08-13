@@ -12,6 +12,8 @@ public interface Commands {
 
     int PRINT_ALL_AUTHOR = 7;
 
+    int DOWNLOAD_BOOK_EXCEL = 8;
+
     int EXIT = 0;
 
     int LOGIN = 1;
@@ -30,6 +32,7 @@ public interface Commands {
         System.out.println("Please input " + PRINT_BOOKS_BY_PRICE_RANGE + " for print books by price range");
         System.out.println("Please input " + ADD_AUTHOR + " for add author");
         System.out.println("Please input " + PRINT_ALL_AUTHOR + " for print all author");
+        System.out.println("Please input " + DOWNLOAD_BOOK_EXCEL + " for download book excel");
 
 
     }
@@ -43,6 +46,7 @@ public interface Commands {
         System.out.println("Please input " + PRINT_BOOKS_BY_AUTHOR_NAME + " for print books by author name");
         System.out.println("Please input " + PRINT_BOOKS_BY_GENRE + " for print books by genre");
         System.out.println("Please input " + PRINT_BOOKS_BY_PRICE_RANGE + " for print books by price range");
+        System.out.println("Please input " + DOWNLOAD_BOOK_EXCEL + " for download book excel");
 
 
     }
